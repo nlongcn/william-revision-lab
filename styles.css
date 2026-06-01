@@ -1137,8 +1137,56 @@ button {
 
 .science-diagram {
   display: grid;
+  gap: 12px;
+}
+
+.science-diagram-heading {
+  display: grid;
+  gap: 4px;
+}
+
+.science-diagram-heading strong {
+  color: #17386f;
+  font-size: 1.02rem;
+  line-height: 1.2;
+}
+
+.science-diagram-heading span {
+  color: #3f4656;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.science-diagram-artwork {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.science-diagram-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.science-diagram-labels {
+  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
+}
+
+.science-diagram-label {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid rgba(20, 108, 128, 0.2);
+  border-radius: 8px;
+  color: #174a38;
+  background: #e7f7ef;
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.28;
+  text-align: center;
 }
 
 .science-diagram-tile {
@@ -1255,7 +1303,7 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .science-diagram {
+  .science-diagram-labels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1322,7 +1370,7 @@ button {
   .verb-grid,
   .pattern-grid,
   .decision-grid,
-  .science-diagram {
+  .science-diagram-labels {
     grid-template-columns: 1fr;
   }
 

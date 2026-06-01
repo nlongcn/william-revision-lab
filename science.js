@@ -667,6 +667,414 @@ const scienceState = {
   answersRevealed: 0
 };
 
+const scienceDiagramData = {
+  variables: {
+    title: "Fair test map",
+    caption: "Change one thing, measure one result, and lock the rest so the test is valid.",
+    points: ["IV: changed by pupil", "DV: measured result", "Controls: kept same", "Repeats: reliable mean"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Fair testing diagram showing independent variable, dependent variable, controls and repeats">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <rect x="54" y="68" width="170" height="72" rx="14" fill="#146c80" />
+        <text x="139" y="96" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">Change</text>
+        <text x="139" y="122" text-anchor="middle" font-size="15" fill="#d9f8f2">independent variable</text>
+        <path d="M232 104H316" stroke="#17386f" stroke-width="8" stroke-linecap="round" />
+        <path d="M316 104l-18-14v28z" fill="#17386f" />
+        <rect x="332" y="52" width="120" height="108" rx="18" fill="#ffffff" stroke="#146c80" stroke-width="4" />
+        <path d="M372 94c0-22 40-22 40 0v16h-40z" fill="#e7f7ef" stroke="#1f7a5c" stroke-width="4" />
+        <rect x="358" y="110" width="68" height="34" rx="6" fill="#1f7a5c" />
+        <circle cx="392" cy="126" r="5" fill="#fff" />
+        <text x="392" y="188" text-anchor="middle" font-size="18" font-weight="800" fill="#17386f">Fair test</text>
+        <path d="M462 104H546" stroke="#17386f" stroke-width="8" stroke-linecap="round" />
+        <path d="M546 104l-18-14v28z" fill="#17386f" />
+        <rect x="560" y="68" width="120" height="72" rx="14" fill="#1f7a5c" />
+        <text x="620" y="96" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">Measure</text>
+        <text x="620" y="119" text-anchor="middle" font-size="13" fill="#e7f7ef">dependent</text>
+        <text x="620" y="135" text-anchor="middle" font-size="13" fill="#e7f7ef">variable</text>
+        <rect x="58" y="220" width="198" height="68" rx="14" fill="#fff" stroke="#d7dde8" />
+        <text x="157" y="248" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Control variables</text>
+        <text x="157" y="273" text-anchor="middle" font-size="14" fill="#3f4656">temperature, time, amount</text>
+        <rect x="288" y="220" width="142" height="68" rx="14" fill="#fff" stroke="#d7dde8" />
+        <text x="359" y="248" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Repeat</text>
+        <text x="359" y="273" text-anchor="middle" font-size="14" fill="#3f4656">3 readings</text>
+        <rect x="462" y="220" width="198" height="68" rx="14" fill="#fff" stroke="#d7dde8" />
+        <text x="561" y="248" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Mean</text>
+        <text x="561" y="273" text-anchor="middle" font-size="14" fill="#3f4656">ignore justified anomaly</text>
+      </svg>`
+  },
+  graphs: {
+    title: "Results to graph",
+    caption: "Continuous numbers need a line graph; categories need bars. Always show units.",
+    points: ["x-axis = changed", "y-axis = measured", "Circle anomalies", "Use units in headings"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Line graph diagram with axes, units and an anomalous result">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <rect x="52" y="64" width="160" height="216" rx="14" fill="#f8fafc" stroke="#d7dde8" />
+        <text x="132" y="92" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Table</text>
+        <line x1="74" y1="116" x2="190" y2="116" stroke="#d7dde8" />
+        <line x1="132" y1="104" x2="132" y2="260" stroke="#d7dde8" />
+        <text x="102" y="142" text-anchor="middle" font-size="13" fill="#3f4656">time / s</text>
+        <text x="162" y="142" text-anchor="middle" font-size="13" fill="#3f4656">temp / C</text>
+        <text x="102" y="178" text-anchor="middle" font-size="15" fill="#3f4656">1</text>
+        <text x="162" y="178" text-anchor="middle" font-size="15" fill="#3f4656">72</text>
+        <text x="102" y="214" text-anchor="middle" font-size="15" fill="#3f4656">2</text>
+        <text x="162" y="214" text-anchor="middle" font-size="15" fill="#3f4656">64</text>
+        <text x="102" y="250" text-anchor="middle" font-size="15" fill="#3f4656">3</text>
+        <text x="162" y="250" text-anchor="middle" font-size="15" fill="#c43d4b">91</text>
+        <path d="M230 178h60" stroke="#17386f" stroke-width="8" stroke-linecap="round" />
+        <path d="M290 178l-18-14v28z" fill="#17386f" />
+        <rect x="318" y="58" width="340" height="236" rx="14" fill="#f7fbff" stroke="#d7dde8" />
+        <line x1="376" y1="244" x2="620" y2="244" stroke="#17386f" stroke-width="4" />
+        <line x1="376" y1="244" x2="376" y2="92" stroke="#17386f" stroke-width="4" />
+        <text x="498" y="278" text-anchor="middle" font-size="15" font-weight="800" fill="#17386f">time / s</text>
+        <text x="344" y="160" transform="rotate(-90 344 160)" text-anchor="middle" font-size="15" font-weight="800" fill="#17386f">temperature / C</text>
+        <polyline points="390,124 448,146 506,172 564,202" fill="none" stroke="#146c80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="390" cy="124" r="7" fill="#146c80" />
+        <circle cx="448" cy="146" r="7" fill="#146c80" />
+        <circle cx="506" cy="108" r="8" fill="#c43d4b" />
+        <circle cx="506" cy="108" r="18" fill="none" stroke="#c43d4b" stroke-width="3" stroke-dasharray="6 6" />
+        <circle cx="564" cy="202" r="7" fill="#146c80" />
+        <text x="582" y="106" font-size="14" font-weight="800" fill="#c43d4b">anomaly</text>
+      </svg>`
+  },
+  evaluation: {
+    title: "Conclusion ladder",
+    caption: "Build answers in this order: pattern, evidence, reliability, improvement.",
+    points: ["Pattern first", "Quote numbers", "Judge reliability", "Improve the method"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Conclusion ladder with pattern, evidence, reliability and improvement steps">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <path d="M170 292h380" stroke="#d7dde8" stroke-width="10" stroke-linecap="round" />
+        <rect x="120" y="236" width="160" height="52" rx="12" fill="#146c80" />
+        <rect x="220" y="178" width="160" height="52" rx="12" fill="#1f7a5c" />
+        <rect x="320" y="120" width="160" height="52" rx="12" fill="#b55b00" />
+        <rect x="420" y="62" width="160" height="52" rx="12" fill="#7250b5" />
+        <text x="200" y="268" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Pattern</text>
+        <text x="300" y="210" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Evidence</text>
+        <text x="400" y="152" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Reliability</text>
+        <text x="500" y="94" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Improve</text>
+        <path d="M202 234l56-42M302 176l56-42M402 118l56-42" stroke="#17386f" stroke-width="5" stroke-linecap="round" marker-end="url(#scienceArrowEval)" />
+        <defs><marker id="scienceArrowEval" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <rect x="90" y="66" width="210" height="92" rx="14" fill="#fff" stroke="#d7dde8" />
+        <text x="195" y="98" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">CE sentence frame</text>
+        <text x="195" y="124" text-anchor="middle" font-size="14" fill="#3f4656">As X increased, Y...</text>
+        <text x="195" y="146" text-anchor="middle" font-size="14" fill="#3f4656">For example, 8 to 24...</text>
+      </svg>`
+  },
+  photosynthesis: {
+    title: "Photosynthesis inputs and outputs",
+    caption: "The plant uses light energy to make glucose; oxygen is a by-product.",
+    points: ["CO2 enters leaves", "Water comes from roots", "Light and chlorophyll needed", "Glucose can become starch"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Photosynthesis diagram showing carbon dioxide, water and light making glucose and oxygen">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <circle cx="118" cy="90" r="40" fill="#ffd166" stroke="#b55b00" stroke-width="4" />
+        <g stroke="#b55b00" stroke-width="5" stroke-linecap="round">
+          <line x1="118" y1="30" x2="118" y2="8" /><line x1="118" y1="172" x2="118" y2="146" />
+          <line x1="58" y1="90" x2="32" y2="90" /><line x1="204" y1="90" x2="178" y2="90" />
+          <line x1="76" y1="48" x2="58" y2="30" /><line x1="160" y1="132" x2="178" y2="150" />
+          <line x1="160" y1="48" x2="178" y2="30" /><line x1="76" y1="132" x2="58" y2="150" />
+        </g>
+        <path d="M340 92c98-72 198 6 168 104-26 86-164 96-220 30-52-62-16-110 52-134z" fill="#55a56f" stroke="#1f7a5c" stroke-width="5" />
+        <path d="M346 242c42-42 82-88 132-136" stroke="#174a38" stroke-width="5" stroke-linecap="round" />
+        <path d="M292 164h-94" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
+        <path d="M244 262h72" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
+        <path d="M526 164h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
+        <path d="M526 218h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
+        <defs><marker id="scienceArrowPhoto" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="currentColor" /></marker></defs>
+        <text x="142" y="158" font-size="18" font-weight="900" fill="#146c80">CO2 in</text>
+        <text x="204" y="286" font-size="18" font-weight="900" fill="#146c80">H2O from roots</text>
+        <text x="556" y="154" font-size="18" font-weight="900" fill="#1f7a5c">O2 out</text>
+        <text x="548" y="210" font-size="18" font-weight="900" fill="#1f7a5c">glucose</text>
+        <text x="330" y="286" font-size="18" font-weight="900" fill="#17386f">stored as starch</text>
+      </svg>`
+  },
+  starch: {
+    title: "Starch test sequence",
+    caption: "The order earns marks: boil, ethanol water bath, rinse, iodine.",
+    points: ["Boil to soften", "Ethanol removes chlorophyll", "Use a water bath", "Blue-black = starch"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Testing a leaf for starch practical sequence">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <g fill="#f8fafc" stroke="#d7dde8"><rect x="48" y="68" width="136" height="210" rx="14" /><rect x="212" y="68" width="136" height="210" rx="14" /><rect x="376" y="68" width="136" height="210" rx="14" /><rect x="540" y="68" width="136" height="210" rx="14" /></g>
+        <text x="116" y="104" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">1 Boil</text>
+        <path d="M82 178h68l-12 52H94z" fill="#d9f8f2" stroke="#146c80" stroke-width="4" />
+        <ellipse cx="116" cy="176" rx="35" ry="8" fill="#ffffff" stroke="#146c80" stroke-width="4" />
+        <path d="M96 154c10-22 40-22 50 0" fill="none" stroke="#55a56f" stroke-width="8" stroke-linecap="round" />
+        <text x="280" y="104" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">2 Ethanol</text>
+        <rect x="246" y="144" width="68" height="96" rx="10" fill="#fff7e8" stroke="#b55b00" stroke-width="4" />
+        <path d="M230 214h100" stroke="#146c80" stroke-width="8" stroke-linecap="round" />
+        <text x="280" y="264" text-anchor="middle" font-size="13" fill="#c43d4b">no direct flame</text>
+        <text x="444" y="104" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">3 Rinse</text>
+        <path d="M410 164c26-36 72-14 66 30-5 36-52 48-74 20-18-22-10-38 8-50z" fill="#82c596" stroke="#1f7a5c" stroke-width="4" />
+        <path d="M430 144c28 14 46 14 72 0" fill="none" stroke="#146c80" stroke-width="5" stroke-linecap="round" />
+        <path d="M424 136l-10 16M456 136l-10 16M488 136l-10 16" stroke="#146c80" stroke-width="4" stroke-linecap="round" />
+        <text x="608" y="104" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">4 Iodine</text>
+        <path d="M574 178c26-38 78-16 68 32-8 38-60 46-82 14-16-22-6-36 14-46z" fill="#21306b" stroke="#111936" stroke-width="4" />
+        <path d="M620 140c0 18-20 18-20 0 0-10 10-24 10-24s10 14 10 24z" fill="#b55b00" />
+        <text x="608" y="264" text-anchor="middle" font-size="14" font-weight="900" fill="#21306b">blue-black</text>
+      </svg>`
+  },
+  respiration: {
+    title: "Respiration is in cells",
+    caption: "Breathing brings oxygen in; respiration releases energy inside cells.",
+    points: ["Glucose + oxygen", "Occurs in cells", "Energy released", "CO2 + water made"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Aerobic respiration diagram in a cell">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <ellipse cx="366" cy="184" rx="170" ry="108" fill="#ffffff" stroke="#146c80" stroke-width="5" />
+        <ellipse cx="368" cy="184" rx="76" ry="44" fill="#ffd166" stroke="#b55b00" stroke-width="5" />
+        <path d="M318 184c26-26 74 26 100 0" fill="none" stroke="#b55b00" stroke-width="5" stroke-linecap="round" />
+        <text x="368" y="190" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">mitochondrion</text>
+        <path d="M88 130h134" stroke="#146c80" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
+        <path d="M88 226h134" stroke="#146c80" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
+        <path d="M514 134h116" stroke="#1f7a5c" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
+        <path d="M514 224h116" stroke="#1f7a5c" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
+        <defs><marker id="scienceArrowResp" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <text x="86" y="118" font-size="18" font-weight="900" fill="#146c80">glucose</text>
+        <text x="86" y="214" font-size="18" font-weight="900" fill="#146c80">oxygen</text>
+        <text x="548" y="122" font-size="18" font-weight="900" fill="#1f7a5c">energy</text>
+        <text x="548" y="214" font-size="18" font-weight="900" fill="#1f7a5c">CO2 + water</text>
+        <text x="366" y="302" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">glucose + oxygen -> carbon dioxide + water</text>
+      </svg>`
+  },
+  nutrition: {
+    title: "Seven food groups",
+    caption: "Match each nutrient to its main job before answering diet questions.",
+    points: ["Carbs: energy", "Protein: growth and repair", "Fibre: gut movement", "Water: body processes"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Balanced diet plate showing nutrient jobs">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <circle cx="242" cy="180" r="104" fill="#f8fafc" stroke="#17386f" stroke-width="5" />
+        <path d="M242 180L242 76A104 104 0 0 1 340 146z" fill="#ffd166" />
+        <path d="M242 180L340 146A104 104 0 0 1 312 258z" fill="#55a56f" />
+        <path d="M242 180L312 258A104 104 0 0 1 146 252z" fill="#c43d4b" />
+        <path d="M242 180L146 252A104 104 0 0 1 242 76z" fill="#6aa7d8" />
+        <circle cx="242" cy="180" r="42" fill="#ffffff" stroke="#d7dde8" stroke-width="4" />
+        <text x="242" y="174" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">balanced</text>
+        <text x="242" y="196" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">diet</text>
+        <g font-size="16" font-weight="900" fill="#17386f">
+          <text x="420" y="102">carbohydrates -> energy</text>
+          <text x="420" y="144">protein -> growth and repair</text>
+          <text x="420" y="186">fat -> store energy, insulate</text>
+          <text x="420" y="228">vitamins/minerals -> health</text>
+          <text x="420" y="270">fibre + water -> digestion</text>
+        </g>
+        <g stroke="#d7dde8" stroke-width="3"><line x1="400" y1="112" x2="648" y2="112" /><line x1="400" y1="154" x2="648" y2="154" /><line x1="400" y1="196" x2="648" y2="196" /><line x1="400" y1="238" x2="648" y2="238" /></g>
+      </svg>`
+  },
+  healthy: {
+    title: "Health is a balance",
+    caption: "Diet, exercise, sleep and age all affect the amount of energy and nutrients needed.",
+    points: ["Balanced means right amounts", "Needs change with activity", "Too much energy can be stored", "Exercise uses energy"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Health balance diagram comparing energy intake and energy use">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <line x1="360" y1="102" x2="360" y2="264" stroke="#17386f" stroke-width="8" stroke-linecap="round" />
+        <line x1="218" y1="154" x2="502" y2="154" stroke="#17386f" stroke-width="8" stroke-linecap="round" />
+        <path d="M218 154l-72 92h144z" fill="#ffffff" stroke="#146c80" stroke-width="5" />
+        <path d="M502 154l-72 92h144z" fill="#ffffff" stroke="#1f7a5c" stroke-width="5" />
+        <text x="218" y="218" text-anchor="middle" font-size="19" font-weight="900" fill="#146c80">energy in</text>
+        <text x="502" y="218" text-anchor="middle" font-size="19" font-weight="900" fill="#1f7a5c">energy used</text>
+        <rect x="98" y="78" width="210" height="48" rx="12" fill="#146c80" />
+        <text x="203" y="108" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">food and drink</text>
+        <rect x="412" y="78" width="210" height="48" rx="12" fill="#1f7a5c" />
+        <text x="517" y="108" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">exercise and growth</text>
+        <rect x="254" y="282" width="212" height="34" rx="10" fill="#fff" stroke="#d7dde8" />
+        <text x="360" y="305" text-anchor="middle" font-size="15" font-weight="900" fill="#17386f">balanced for that person</text>
+      </svg>`
+  },
+  particles: {
+    title: "Particle diagrams",
+    caption: "Look for atom type and whether particles are chemically joined.",
+    points: ["Element: one atom type", "Compound: joined atoms", "Mixture: not joined", "Physical methods separate mixtures"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Particle diagrams for element compound and mixture">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <g>
+          <rect x="58" y="76" width="174" height="208" rx="16" fill="#f8fafc" stroke="#d7dde8" />
+          <text x="145" y="110" text-anchor="middle" font-size="19" font-weight="900" fill="#17386f">Element</text>
+          <circle cx="112" cy="160" r="18" fill="#146c80" /><circle cx="174" cy="160" r="18" fill="#146c80" /><circle cx="112" cy="224" r="18" fill="#146c80" /><circle cx="174" cy="224" r="18" fill="#146c80" />
+          <text x="145" y="262" text-anchor="middle" font-size="14" fill="#3f4656">one atom type</text>
+        </g>
+        <g>
+          <rect x="274" y="76" width="174" height="208" rx="16" fill="#f8fafc" stroke="#d7dde8" />
+          <text x="361" y="110" text-anchor="middle" font-size="19" font-weight="900" fill="#17386f">Compound</text>
+          <g stroke="#17386f" stroke-width="4"><line x1="330" y1="166" x2="366" y2="166" /><line x1="330" y1="224" x2="366" y2="224" /></g>
+          <circle cx="320" cy="166" r="18" fill="#146c80" /><circle cx="374" cy="166" r="18" fill="#c43d4b" /><circle cx="320" cy="224" r="18" fill="#146c80" /><circle cx="374" cy="224" r="18" fill="#c43d4b" />
+          <text x="361" y="262" text-anchor="middle" font-size="14" fill="#3f4656">chemically joined</text>
+        </g>
+        <g>
+          <rect x="490" y="76" width="174" height="208" rx="16" fill="#f8fafc" stroke="#d7dde8" />
+          <text x="577" y="110" text-anchor="middle" font-size="19" font-weight="900" fill="#17386f">Mixture</text>
+          <circle cx="540" cy="154" r="17" fill="#146c80" /><circle cx="604" cy="166" r="17" fill="#c43d4b" /><circle cx="558" cy="226" r="17" fill="#1f7a5c" />
+          <g stroke="#17386f" stroke-width="4"><line x1="596" y1="218" x2="628" y2="218" /></g>
+          <circle cx="588" cy="218" r="16" fill="#146c80" /><circle cx="636" cy="218" r="16" fill="#c43d4b" />
+          <text x="577" y="262" text-anchor="middle" font-size="14" fill="#3f4656">not all joined</text>
+        </g>
+      </svg>`
+  },
+  ph: {
+    title: "pH scale and neutralisation",
+    caption: "Lower pH is more acidic; higher pH is more alkaline. Neutralisation moves towards 7.",
+    points: ["Acid: pH below 7", "Neutral: pH 7", "Alkali: pH above 7", "acid + alkali -> salt + water"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="pH scale diagram from acid to neutral to alkali">
+        <defs>
+          <linearGradient id="sciencePhGradient" x1="0" x2="1"><stop offset="0%" stop-color="#c43d4b" /><stop offset="50%" stop-color="#55a56f" /><stop offset="100%" stop-color="#7250b5" /></linearGradient>
+        </defs>
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <rect x="84" y="146" width="552" height="54" rx="16" fill="url(#sciencePhGradient)" />
+        <g font-size="15" font-weight="900" fill="#17386f">
+          <text x="84" y="228" text-anchor="middle">0</text><text x="360" y="228" text-anchor="middle">7</text><text x="636" y="228" text-anchor="middle">14</text>
+        </g>
+        <line x1="360" y1="132" x2="360" y2="212" stroke="#17386f" stroke-width="5" />
+        <text x="180" y="118" text-anchor="middle" font-size="22" font-weight="900" fill="#c43d4b">acid</text>
+        <text x="360" y="118" text-anchor="middle" font-size="22" font-weight="900" fill="#1f7a5c">neutral</text>
+        <text x="540" y="118" text-anchor="middle" font-size="22" font-weight="900" fill="#7250b5">alkali</text>
+        <path d="M196 272h328" stroke="#17386f" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPh)" />
+        <defs><marker id="scienceArrowPh" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <text x="360" y="304" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">acid + alkali -> salt + water</text>
+      </svg>`
+  },
+  chromatography: {
+    title: "Paper chromatography setup",
+    caption: "The start spot must be above the solvent; pencil will not dissolve and run.",
+    points: ["Pencil start line", "Spot above solvent", "Solvent front rises", "More spots = mixture"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Paper chromatography diagram with solvent front, pencil line and separated spots">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <path d="M226 76h268l-28 220H254z" fill="#ffffff" stroke="#17386f" stroke-width="5" />
+        <path d="M258 252h204" stroke="#6aa7d8" stroke-width="28" stroke-linecap="round" />
+        <rect x="316" y="72" width="88" height="222" rx="4" fill="#fffdf6" stroke="#d7dde8" stroke-width="3" />
+        <line x1="330" y1="240" x2="390" y2="240" stroke="#3f4656" stroke-width="3" stroke-dasharray="7 5" />
+        <line x1="330" y1="118" x2="390" y2="118" stroke="#146c80" stroke-width="4" />
+        <circle cx="360" cy="230" r="8" fill="#111936" />
+        <circle cx="352" cy="190" r="9" fill="#c43d4b" />
+        <circle cx="366" cy="160" r="9" fill="#b55b00" />
+        <circle cx="354" cy="134" r="9" fill="#7250b5" />
+        <text x="472" y="122" font-size="16" font-weight="900" fill="#146c80">solvent front</text>
+        <text x="90" y="242" font-size="16" font-weight="900" fill="#17386f">pencil start line</text>
+        <path d="M222 236h94" stroke="#17386f" stroke-width="4" stroke-linecap="round" marker-end="url(#scienceArrowChrom)" />
+        <path d="M470 118h-72" stroke="#146c80" stroke-width="4" stroke-linecap="round" marker-end="url(#scienceArrowChrom)" />
+        <defs><marker id="scienceArrowChrom" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <text x="360" y="320" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">different dyes travel different distances</text>
+      </svg>`
+  },
+  air: {
+    title: "Air composition",
+    caption: "Air is a mixture because gases are together but not chemically joined.",
+    points: ["Nitrogen about 78%", "Oxygen about 21%", "CO2 is small", "Proportions can vary"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Air composition bar showing nitrogen oxygen and trace gases">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <rect x="82" y="150" width="556" height="62" rx="18" fill="#f8fafc" stroke="#d7dde8" />
+        <rect x="82" y="150" width="434" height="62" rx="18" fill="#146c80" />
+        <rect x="500" y="150" width="118" height="62" fill="#1f7a5c" />
+        <rect x="612" y="150" width="26" height="62" rx="12" fill="#b55b00" />
+        <text x="292" y="188" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">nitrogen 78%</text>
+        <text x="558" y="188" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">O2 21%</text>
+        <text x="625" y="238" text-anchor="middle" font-size="14" font-weight="900" fill="#b55b00">trace</text>
+        <rect x="98" y="82" width="198" height="44" rx="12" fill="#e7f7ef" stroke="#1f7a5c" />
+        <text x="197" y="110" text-anchor="middle" font-size="16" font-weight="900" fill="#174a38">not chemically joined</text>
+        <rect x="424" y="82" width="198" height="44" rx="12" fill="#eef4ff" stroke="#146c80" />
+        <text x="523" y="110" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">separable physically</text>
+        <text x="360" y="290" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">mixture, not compound</text>
+      </svg>`
+  },
+  energy: {
+    title: "Energy transfer diagram",
+    caption: "Name the starting store, useful transfer and wasted transfer for the device.",
+    points: ["Stores are nouns", "Transfers are pathways", "Useful = wanted output", "Wasted = surroundings"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Sankey style energy transfer diagram">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <rect x="72" y="134" width="160" height="82" rx="16" fill="#146c80" />
+        <text x="152" y="168" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">chemical</text>
+        <text x="152" y="194" text-anchor="middle" font-size="16" fill="#d9f8f2">store</text>
+        <path d="M240 176h168" stroke="#17386f" stroke-width="34" stroke-linecap="round" />
+        <path d="M408 176l-28-22v44z" fill="#17386f" />
+        <path d="M418 176h168" stroke="#1f7a5c" stroke-width="28" stroke-linecap="round" />
+        <path d="M586 176l-24-18v36z" fill="#1f7a5c" />
+        <path d="M414 198c40 48 84 70 136 72" fill="none" stroke="#c43d4b" stroke-width="20" stroke-linecap="round" />
+        <text x="514" y="152" text-anchor="middle" font-size="18" font-weight="900" fill="#1f7a5c">useful light</text>
+        <text x="534" y="306" text-anchor="middle" font-size="18" font-weight="900" fill="#c43d4b">wasted heat/sound</text>
+        <text x="326" y="122" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">transfer pathway</text>
+      </svg>`
+  },
+  conservation: {
+    title: "Energy is conserved",
+    caption: "Wasted energy has not disappeared; it has spread into the surroundings.",
+    points: ["Input total stays same", "Useful output is smaller", "Wasted is dissipated", "100 J = 70 J + 30 J"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Energy conservation split of 100 joules into useful and wasted energy">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <rect x="68" y="124" width="150" height="112" rx="18" fill="#146c80" />
+        <text x="143" y="172" text-anchor="middle" font-size="26" font-weight="900" fill="#fff">100 J</text>
+        <text x="143" y="202" text-anchor="middle" font-size="17" fill="#d9f8f2">input</text>
+        <path d="M238 180h106" stroke="#17386f" stroke-width="12" stroke-linecap="round" marker-end="url(#scienceArrowCons)" />
+        <defs><marker id="scienceArrowCons" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <rect x="378" y="92" width="122" height="86" rx="16" fill="#1f7a5c" />
+        <text x="439" y="130" text-anchor="middle" font-size="24" font-weight="900" fill="#fff">70 J</text>
+        <text x="439" y="156" text-anchor="middle" font-size="15" fill="#e7f7ef">useful</text>
+        <rect x="378" y="204" width="122" height="86" rx="16" fill="#c43d4b" />
+        <text x="439" y="242" text-anchor="middle" font-size="24" font-weight="900" fill="#fff">30 J</text>
+        <text x="439" y="268" text-anchor="middle" font-size="15" fill="#ffe8ea">wasted</text>
+        <text x="580" y="186" text-anchor="middle" font-size="38" font-weight="900" fill="#17386f">=</text>
+        <text x="580" y="226" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">same total</text>
+      </svg>`
+  },
+  resources: {
+    title: "Energy resource comparison",
+    caption: "Comparison answers need both sides: renewable status, pollution and reliability.",
+    points: ["Renewable replaces quickly", "Non-renewable runs out", "Fossil fuels release CO2", "Weather affects some renewables"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Renewable and non-renewable energy resources comparison">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <rect x="70" y="72" width="260" height="218" rx="18" fill="#e7f7ef" stroke="#1f7a5c" stroke-width="4" />
+        <rect x="390" y="72" width="260" height="218" rx="18" fill="#fff7e8" stroke="#b55b00" stroke-width="4" />
+        <text x="200" y="110" text-anchor="middle" font-size="22" font-weight="900" fill="#174a38">renewable</text>
+        <text x="520" y="110" text-anchor="middle" font-size="22" font-weight="900" fill="#7a3c00">non-renewable</text>
+        <path d="M154 160c28-34 84-28 104 10" fill="none" stroke="#1f7a5c" stroke-width="8" stroke-linecap="round" />
+        <path d="M262 166l-26-4 14-22z" fill="#1f7a5c" />
+        <circle cx="176" cy="204" r="22" fill="#ffd166" stroke="#b55b00" stroke-width="4" />
+        <path d="M222 194l42-30M230 216l42 30" stroke="#146c80" stroke-width="7" stroke-linecap="round" />
+        <text x="200" y="264" text-anchor="middle" font-size="16" font-weight="900" fill="#174a38">wind, solar, hydro</text>
+        <path d="M456 164h120l-20 70H476z" fill="#3f4656" />
+        <path d="M484 136c-20-24 20-34 0-58M536 136c-20-24 20-34 0-58" fill="none" stroke="#667085" stroke-width="9" stroke-linecap="round" />
+        <text x="520" y="264" text-anchor="middle" font-size="16" font-weight="900" fill="#7a3c00">coal, oil, gas</text>
+        <text x="360" y="318" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">Use advantages and disadvantages for comparison questions</text>
+      </svg>`
+  },
+  pollution: {
+    title: "Fossil fuel effects chain",
+    caption: "Name the pollutant, then match it to the correct environmental or health effect.",
+    points: ["CO2: greenhouse effect", "SO2: acid rain", "Particulates: breathing problems", "Reduce by using less fossil fuel"],
+    svg: `
+      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Fossil fuel pollution effects showing carbon dioxide sulfur dioxide and particulates">
+        <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
+        <rect x="74" y="190" width="150" height="78" rx="12" fill="#3f4656" />
+        <rect x="106" y="132" width="24" height="58" fill="#667085" />
+        <rect x="164" y="112" width="24" height="78" fill="#667085" />
+        <path d="M118 118c-22-26 18-38 0-64M176 98c-22-26 18-38 0-64" fill="none" stroke="#667085" stroke-width="9" stroke-linecap="round" />
+        <text x="149" y="292" text-anchor="middle" font-size="15" font-weight="900" fill="#17386f">burning fuel</text>
+        <path d="M238 170h96" stroke="#17386f" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowPoll)" />
+        <defs><marker id="scienceArrowPoll" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <rect x="354" y="62" width="120" height="58" rx="14" fill="#c43d4b" />
+        <text x="414" y="98" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">CO2</text>
+        <path d="M374 132c58 38 106 38 164 0" fill="none" stroke="#c43d4b" stroke-width="8" stroke-linecap="round" />
+        <text x="456" y="168" text-anchor="middle" font-size="15" font-weight="900" fill="#c43d4b">heat trapped</text>
+        <rect x="354" y="198" width="120" height="58" rx="14" fill="#b55b00" />
+        <text x="414" y="234" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">SO2</text>
+        <path d="M500 210c34-32 92-12 98 34" fill="none" stroke="#146c80" stroke-width="7" stroke-linecap="round" />
+        <path d="M536 248l-12 24M570 248l-12 24M604 248l-12 24" stroke="#146c80" stroke-width="5" stroke-linecap="round" />
+        <text x="562" y="308" text-anchor="middle" font-size="15" font-weight="900" fill="#146c80">acid rain</text>
+        <circle cx="560" cy="94" r="8" fill="#3f4656" /><circle cx="586" cy="116" r="6" fill="#3f4656" /><circle cx="612" cy="86" r="7" fill="#3f4656" />
+        <text x="592" y="148" text-anchor="middle" font-size="15" font-weight="900" fill="#3f4656">particulates</text>
+      </svg>`
+  }
+};
+
 const scienceNav = document.querySelector("#scienceNav");
 const scienceContainer = document.querySelector("#scienceContainer");
 const scienceSearch = document.querySelector("#scienceSearch");
@@ -933,40 +1341,32 @@ function renderScienceQuestions(target, questions) {
 function renderScienceVisual(target, type) {
   target.innerHTML = "";
 
+  const data = scienceDiagramData[type] || scienceDiagramData.variables;
   const visual = document.createElement("div");
   visual.className = `science-diagram ${type}`;
 
-  const contentByType = {
-    variables: [["Change", "Independent"], ["Measure", "Dependent"], ["Keep same", "Controls"], ["Repeat", "Reliable"]],
-    graphs: [["x-axis", "What you changed"], ["y-axis", "What you measured"], ["Units", "In headings"], ["Anomaly", "Check it"]],
-    evaluation: [["Pattern", "Say what changed"], ["Evidence", "Quote numbers"], ["Reliability", "Repeats"], ["Improve", "Fix weakness"]],
-    photosynthesis: [["Carbon dioxide", "in"], ["Water", "in"], ["Light + chlorophyll", "needed"], ["Glucose + oxygen", "out"]],
-    starch: [["Boil water", "soften"], ["Ethanol bath", "remove green"], ["Iodine", "test"], ["Blue-black", "starch"]],
-    respiration: [["Glucose", "fuel"], ["Oxygen", "in"], ["Energy", "released"], ["Carbon dioxide", "out"]],
-    nutrition: [["Carbs", "energy"], ["Protein", "growth"], ["Fibre", "gut"], ["Vitamins", "health"]],
-    healthy: [["Balanced", "right amounts"], ["Exercise", "uses energy"], ["Too much sugar", "risk"], ["Sleep", "recovery"]],
-    particles: [["Element", "one atom type"], ["Compound", "joined atoms"], ["Mixture", "not joined"], ["Separate", "physical"]],
-    ph: [["Acid", "pH < 7"], ["Neutral", "pH 7"], ["Alkali", "pH > 7"], ["Neutralise", "salt + water"]],
-    chromatography: [["Pencil line", "does not run"], ["Solvent", "moves"], ["Spots", "separate"], ["Mixture", "many dyes"]],
-    air: [["Nitrogen", "78%"], ["Oxygen", "21%"], ["Carbon dioxide", "small"], ["Mixture", "not joined"]],
-    energy: [["Chemical store", "battery/fuel"], ["Useful", "wanted"], ["Wasted", "heat/sound"], ["Transfer", "pathway"]],
-    conservation: [["Input", "100 J"], ["Useful", "70 J"], ["Wasted", "30 J"], ["Total", "still 100 J"]],
-    resources: [["Fossil fuels", "non-renewable"], ["Wind", "renewable"], ["Solar", "renewable"], ["Reliable?", "compare"]],
-    pollution: [["Fuel burns", "CO2"], ["Greenhouse gas", "warmer"], ["SO2", "acid rain"], ["Particles", "lungs"]]
-  };
+  const heading = document.createElement("div");
+  heading.className = "science-diagram-heading";
+  const title = document.createElement("strong");
+  title.textContent = data.title;
+  const caption = document.createElement("span");
+  caption.textContent = data.caption;
+  heading.append(title, caption);
 
-  const items = contentByType[type] || contentByType.variables;
-  items.forEach(([top, bottom], index) => {
-    const tile = document.createElement("div");
-    tile.className = `science-diagram-tile${index === 0 ? " hot" : ""}`;
-    const strong = document.createElement("strong");
-    strong.textContent = top;
-    const span = document.createElement("span");
-    span.textContent = bottom;
-    tile.append(strong, span);
-    visual.append(tile);
+  const artwork = document.createElement("div");
+  artwork.className = "science-diagram-artwork";
+  artwork.innerHTML = data.svg;
+
+  const labels = document.createElement("div");
+  labels.className = "science-diagram-labels";
+  data.points.forEach((point) => {
+    const label = document.createElement("span");
+    label.className = "science-diagram-label";
+    label.textContent = point;
+    labels.append(label);
   });
 
+  visual.append(heading, artwork, labels);
   target.append(visual);
 }
 

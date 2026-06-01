@@ -672,6 +672,8 @@ const scienceDiagramData = {
     title: "Fair test map",
     caption: "Change one thing, measure one result, and lock the rest so the test is valid.",
     points: ["IV: changed by pupil", "DV: measured result", "Controls: kept same", "Repeats: reliable mean"],
+    image: "assets/science/fair-test.jpg",
+    overlay: "variables",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Fair testing diagram showing independent variable, dependent variable, controls and repeats">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -709,6 +711,8 @@ const scienceDiagramData = {
     title: "Results to graph",
     caption: "Continuous numbers need a line graph; categories need bars. Always show units.",
     points: ["x-axis = changed", "y-axis = measured", "Circle anomalies", "Use units in headings"],
+    image: "assets/science/graphs.jpg",
+    overlay: "graphs",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Line graph diagram with axes, units and an anomalous result">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -744,6 +748,8 @@ const scienceDiagramData = {
     title: "Conclusion ladder",
     caption: "Build answers in this order: pattern, evidence, reliability, improvement.",
     points: ["Pattern first", "Quote numbers", "Judge reliability", "Improve the method"],
+    image: "assets/science/conclusion-evaluation.jpg",
+    overlay: "evaluation",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Conclusion ladder with pattern, evidence, reliability and improvement steps">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -768,6 +774,8 @@ const scienceDiagramData = {
     title: "Photosynthesis inputs and outputs",
     caption: "The plant uses light energy to make glucose; oxygen is a by-product.",
     points: ["CO2 enters leaves", "Water comes from roots", "Light and chlorophyll needed", "Glucose can become starch"],
+    image: "assets/science/photosynthesis.jpg",
+    overlay: "photosynthesis",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Photosynthesis diagram showing carbon dioxide, water and light making glucose and oxygen">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -804,6 +812,8 @@ const scienceDiagramData = {
     title: "Starch test sequence",
     caption: "The order earns marks: boil, ethanol water bath, rinse, iodine.",
     points: ["Boil to soften", "Ethanol removes chlorophyll", "Use a water bath", "Blue-black = starch"],
+    image: "assets/science/starch-test.jpg",
+    overlay: "starch",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Testing a leaf for starch practical sequence">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -830,6 +840,8 @@ const scienceDiagramData = {
     title: "Respiration is in cells",
     caption: "Breathing brings oxygen in; respiration releases energy inside cells.",
     points: ["Glucose + oxygen", "Occurs in cells", "Energy released", "CO2 + water made"],
+    image: "assets/science/respiration-gas-exchange.jpg",
+    overlay: "respiration",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Aerobic respiration diagram in a cell">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -854,6 +866,8 @@ const scienceDiagramData = {
     title: "Seven food groups",
     caption: "Match each nutrient to its main job before answering diet questions.",
     points: ["Carbs: energy", "Protein: growth and repair", "Fibre: gut movement", "Water: body processes"],
+    image: "assets/science/nutrition.jpg",
+    overlay: "nutrition",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Balanced diet plate showing nutrient jobs">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -879,6 +893,8 @@ const scienceDiagramData = {
     title: "Health is a balance",
     caption: "Diet, exercise, sleep and age all affect the amount of energy and nutrients needed.",
     points: ["Balanced means right amounts", "Needs change with activity", "Too much energy can be stored", "Exercise uses energy"],
+    image: "assets/science/health-balance.jpg",
+    overlay: "healthy",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Health balance diagram comparing energy intake and energy use">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -901,6 +917,8 @@ const scienceDiagramData = {
     title: "Particle diagrams",
     caption: "Look for atom type and whether particles are chemically joined.",
     points: ["Element: one atom type", "Compound: joined atoms", "Mixture: not joined", "Physical methods separate mixtures"],
+    image: "assets/science/particles.jpg",
+    overlay: "particles",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Particle diagrams for element compound and mixture">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -931,6 +949,8 @@ const scienceDiagramData = {
     title: "pH scale and neutralisation",
     caption: "Lower pH is more acidic; higher pH is more alkaline. Neutralisation moves towards 7.",
     points: ["Acid: pH below 7", "Neutral: pH 7", "Alkali: pH above 7", "acid + alkali -> salt + water"],
+    image: "assets/science/ph-neutralisation.jpg",
+    overlay: "ph",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="pH scale diagram from acid to neutral to alkali">
         <defs>
@@ -955,6 +975,8 @@ const scienceDiagramData = {
     title: "Paper chromatography setup",
     caption: "The start spot must be above the solvent; pencil will not dissolve and run.",
     points: ["Pencil start line", "Spot above solvent", "Solvent front rises", "More spots = mixture"],
+    image: "assets/science/chromatography.jpg",
+    overlay: "chromatography",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Paper chromatography diagram with solvent front, pencil line and separated spots">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -980,6 +1002,8 @@ const scienceDiagramData = {
     title: "Air composition",
     caption: "Air is a mixture because gases are together but not chemically joined.",
     points: ["Nitrogen about 78%", "Oxygen about 21%", "CO2 is small", "Proportions can vary"],
+    image: "assets/science/air-mixture.jpg",
+    overlay: "air",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Air composition bar showing nitrogen oxygen and trace gases">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -1003,6 +1027,8 @@ const scienceDiagramData = {
     title: "Energy transfer diagram",
     caption: "Name the starting store, useful transfer and wasted transfer for the device.",
     points: ["Stores are nouns", "Transfers are pathways", "Useful = wanted output", "Wasted = surroundings"],
+    image: "assets/science/energy-transfer.jpg",
+    overlay: "energy",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Sankey style energy transfer diagram">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
@@ -1024,6 +1050,8 @@ const scienceDiagramData = {
     title: "Energy is conserved",
     caption: "Wasted energy has not disappeared; it has spread into the surroundings.",
     points: ["Input total stays same", "Useful output is smaller", "Wasted is dissipated", "100 J = 70 J + 30 J"],
+    image: "assets/science/energy-conservation.jpg",
+    overlay: "conservation",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Energy conservation split of 100 joules into useful and wasted energy">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -1046,6 +1074,8 @@ const scienceDiagramData = {
     title: "Energy resource comparison",
     caption: "Comparison answers need both sides: renewable status, pollution and reliability.",
     points: ["Renewable replaces quickly", "Non-renewable runs out", "Fossil fuels release CO2", "Weather affects some renewables"],
+    image: "assets/science/energy-resources-illustration.jpg",
+    overlay: "resources",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 406" role="img" aria-label="Renewable and non-renewable energy resources comparison">
         <defs>
@@ -1067,6 +1097,8 @@ const scienceDiagramData = {
     title: "Fossil fuel effects chain",
     caption: "Name the pollutant, then match it to the correct environmental or health effect.",
     points: ["CO2: greenhouse effect", "SO2: acid rain", "Particulates: breathing problems", "Reduce by using less fossil fuel"],
+    image: "assets/science/fossil-fuel-effects.jpg",
+    overlay: "pollution",
     svg: `
       <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Fossil fuel pollution effects showing carbon dioxide sulfur dioxide and particulates">
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#ffffff" stroke="#d7dde8" />
@@ -1355,6 +1387,216 @@ function renderScienceQuestions(target, questions) {
   });
 }
 
+function renderScienceImageSvg(type, data) {
+  const clipId = `scienceImageClip-${type}`;
+  return `
+    <svg class="science-diagram-svg science-diagram-image-svg" viewBox="0 0 720 406" role="img" aria-label="${data.title}">
+      <defs>
+        <clipPath id="${clipId}"><rect x="24" y="28" width="672" height="378" rx="22" /></clipPath>
+      </defs>
+      <rect x="24" y="28" width="672" height="378" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+      <image href="${data.image}" x="24" y="28" width="672" height="378" preserveAspectRatio="xMidYMid slice" clip-path="url(#${clipId})" />
+      <rect x="24" y="28" width="672" height="378" rx="22" fill="#ffffff" fill-opacity="0.06" stroke="#d7dde8" />
+      ${scienceImageOverlay(data.overlay || type)}
+    </svg>`;
+}
+
+function scienceImageOverlay(type) {
+  switch (type) {
+    case "variables":
+      return [
+        scienceLabel(64, 58, 160, 56, "Change", "teal", 22),
+        scienceLabel(278, 58, 164, 56, "Fair test", "blue", 20),
+        scienceLabel(496, 58, 160, 56, "Measure", "green", 22),
+        scienceArrow(224, 86, 278, 86, "#17386f"),
+        scienceArrow(442, 86, 496, 86, "#17386f"),
+        scienceLabel(56, 320, 184, 54, ["Control variables", "keep same"], "white", 15),
+        scienceLabel(270, 320, 180, 54, ["Repeat", "3 readings"], "white", 15),
+        scienceLabel(480, 320, 184, 54, ["Mean", "check anomaly"], "white", 15)
+      ].join("");
+    case "graphs":
+      return [
+        scienceLabel(58, 56, 160, 54, "Results table", "white", 16),
+        scienceLabel(280, 56, 160, 54, "Line graph", "blue", 17),
+        scienceLabel(502, 56, 160, 54, "Bar chart", "teal", 17),
+        scienceLabel(54, 318, 148, 46, ["x-axis", "changed"], "white", 14),
+        scienceLabel(214, 318, 148, 46, ["y-axis", "measured"], "white", 14),
+        scienceLabel(374, 318, 148, 46, "circle anomaly", "red", 14),
+        scienceLabel(534, 318, 148, 46, "show units", "white", 14)
+      ].join("");
+    case "evaluation":
+      return [
+        scienceLabel(56, 72, 140, 50, "Pattern", "teal", 18),
+        scienceArrow(196, 97, 248, 97, "#17386f"),
+        scienceLabel(248, 72, 140, 50, "Evidence", "green", 18),
+        scienceArrow(388, 97, 440, 97, "#17386f"),
+        scienceLabel(440, 72, 140, 50, "Reliability", "orange", 18),
+        scienceArrow(580, 97, 632, 97, "#17386f"),
+        scienceLabel(520, 296, 144, 54, "Improve method", "purple", 16),
+        scienceLabel(78, 300, 260, 52, ["CE answer", "pattern + numbers"], "white", 16)
+      ].join("");
+    case "photosynthesis":
+      return [
+        scienceArrow(140, 176, 304, 176, "#146c80"),
+        scienceArrow(174, 306, 306, 264, "#146c80"),
+        scienceArrow(420, 168, 592, 168, "#1f7a5c"),
+        scienceArrow(420, 242, 592, 242, "#1f7a5c"),
+        scienceLabel(74, 148, 88, 52, "CO2 in", "teal", 18),
+        scienceLabel(92, 292, 104, 48, "H2O", "teal", 18),
+        scienceLabel(590, 142, 86, 52, "O2 out", "green", 18),
+        scienceLabel(576, 216, 110, 52, "glucose", "green", 17),
+        scienceLabel(292, 322, 148, 44, "starch store", "blue", 15)
+      ].join("");
+    case "starch":
+      return [
+        scienceLabel(48, 58, 134, 52, "1 Boil", "blue", 17),
+        scienceLabel(208, 58, 134, 52, "2 Ethanol", "orange", 17),
+        scienceLabel(372, 58, 134, 52, "3 Rinse", "teal", 17),
+        scienceLabel(536, 58, 134, 52, "4 Iodine", "purple", 17),
+        scienceLabel(432, 326, 212, 50, "blue-black = starch", "blue", 16),
+        scienceLabel(74, 326, 218, 50, "ethanol in water bath", "red", 15)
+      ].join("");
+    case "respiration":
+      return [
+        scienceArrow(108, 154, 282, 154, "#146c80"),
+        scienceArrow(436, 146, 604, 146, "#1f7a5c"),
+        scienceArrow(436, 238, 604, 238, "#b55b00"),
+        scienceLabel(44, 118, 150, 64, ["glucose", "+ oxygen"], "teal", 17),
+        scienceLabel(276, 300, 184, 50, "respiration in cells", "blue", 16),
+        scienceLabel(556, 108, 140, 64, ["CO2 + water", "made"], "green", 15),
+        scienceLabel(558, 218, 116, 52, "energy", "orange", 18)
+      ].join("");
+    case "nutrition":
+      return [
+        scienceLabel(54, 56, 156, 52, "balanced diet", "blue", 17),
+        scienceLabel(430, 70, 220, 44, "carbs -> energy", "white", 15),
+        scienceLabel(430, 126, 220, 44, "protein -> repair", "white", 15),
+        scienceLabel(430, 182, 220, 44, "fat -> energy store", "white", 15),
+        scienceLabel(430, 238, 220, 44, "vitamins -> health", "white", 15),
+        scienceLabel(430, 294, 220, 44, "fibre + water -> gut", "white", 15)
+      ].join("");
+    case "healthy":
+      return [
+        scienceLabel(56, 72, 150, 56, "energy in", "teal", 19),
+        scienceLabel(514, 72, 150, 56, "energy used", "green", 18),
+        scienceLabel(80, 316, 150, 48, "food and drink", "white", 15),
+        scienceLabel(286, 316, 150, 48, "exercise", "white", 16),
+        scienceLabel(492, 316, 150, 48, "sleep + growth", "white", 15),
+        scienceLabel(268, 166, 184, 52, "balanced needs", "blue", 17)
+      ].join("");
+    case "particles":
+      return [
+        scienceLabel(58, 58, 174, 52, "Element", "blue", 20),
+        scienceLabel(274, 58, 174, 52, "Compound", "green", 20),
+        scienceLabel(490, 58, 174, 52, "Mixture", "orange", 20),
+        scienceLabel(58, 318, 174, 48, "one atom type", "white", 15),
+        scienceLabel(274, 318, 174, 48, "chemically joined", "white", 15),
+        scienceLabel(490, 318, 174, 48, "not all joined", "white", 15)
+      ].join("");
+    case "ph":
+      return [
+        scienceLabel(70, 62, 150, 54, "acid", "red", 22),
+        scienceLabel(286, 62, 150, 54, "neutral", "green", 22),
+        scienceLabel(502, 62, 150, 54, "alkali", "purple", 22),
+        scienceLabel(230, 318, 260, 56, ["acid + alkali", "-> salt + water"], "blue", 17)
+      ].join("");
+    case "chromatography":
+      return [
+        scienceLabel(64, 70, 176, 52, "solvent front", "teal", 17),
+        scienceLabel(64, 300, 184, 52, "pencil start line", "blue", 16),
+        scienceLabel(456, 70, 186, 52, "spot above solvent", "orange", 16),
+        scienceLabel(438, 300, 198, 52, "dyes separate", "purple", 17)
+      ].join("");
+    case "air":
+      return [
+        scienceLabel(74, 70, 188, 56, "nitrogen 78%", "teal", 20),
+        scienceLabel(458, 70, 176, 56, "oxygen 21%", "green", 20),
+        scienceLabel(274, 314, 172, 50, "trace gases", "orange", 17),
+        scienceLabel(80, 314, 172, 50, "mixture", "blue", 18),
+        scienceLabel(468, 314, 172, 50, "not joined", "white", 17)
+      ].join("");
+    case "energy":
+      return [
+        scienceLabel(56, 76, 154, 58, ["chemical", "store"], "teal", 17),
+        scienceArrow(218, 105, 356, 105, "#17386f"),
+        scienceLabel(276, 54, 184, 44, "transfer pathway", "blue", 15),
+        scienceArrow(452, 105, 604, 105, "#1f7a5c"),
+        scienceLabel(552, 76, 130, 58, "useful light", "green", 17),
+        scienceLabel(470, 306, 180, 54, ["wasted", "heat/sound"], "red", 16)
+      ].join("");
+    case "conservation":
+      return [
+        scienceLabel(58, 154, 144, 76, ["100 J", "input"], "teal", 24),
+        scienceArrow(212, 192, 342, 192, "#17386f"),
+        scienceLabel(384, 98, 132, 70, ["70 J", "useful"], "green", 22),
+        scienceLabel(384, 226, 132, 70, ["30 J", "wasted"], "red", 22),
+        scienceLabel(548, 172, 120, 66, ["same", "total"], "blue", 19)
+      ].join("");
+    case "resources":
+      return [
+        scienceLabel(58, 50, 250, 50, "renewable", "green", 24),
+        scienceLabel(412, 50, 250, 50, "non-renewable", "orange", 23),
+        scienceLabel(68, 324, 254, 48, "wind, solar, hydro", "whiteGreen", 18),
+        scienceLabel(398, 324, 254, 48, "coal, oil, gas", "whiteOrange", 18)
+      ].join("");
+    case "pollution":
+      return [
+        scienceLabel(58, 282, 150, 54, "burning fuel", "white", 16),
+        scienceArrow(220, 192, 330, 150, "#17386f"),
+        scienceLabel(310, 72, 96, 54, "CO2", "red", 20),
+        scienceLabel(428, 132, 150, 50, "heat trapped", "red", 16),
+        scienceLabel(332, 230, 116, 54, "SO2", "orange", 20),
+        scienceLabel(482, 256, 132, 50, "acid rain", "teal", 17),
+        scienceLabel(528, 68, 142, 50, "particulates", "white", 16)
+      ].join("");
+    default:
+      return "";
+  }
+}
+
+function scienceLabel(x, y, width, height, content, tone = "white", size = 16) {
+  const tones = {
+    blue: ["#ffffff", "#17386f", "#17386f"],
+    teal: ["#e8f8fb", "#146c80", "#146c80"],
+    green: ["#e7f7ef", "#1f7a5c", "#174a38"],
+    orange: ["#fff7e8", "#b55b00", "#7a3c00"],
+    purple: ["#f2edff", "#7250b5", "#3d2a72"],
+    red: ["#fff0f2", "#c43d4b", "#8a2430"],
+    white: ["#ffffff", "#d7dde8", "#17386f"],
+    whiteGreen: ["#ffffff", "#1f7a5c", "#174a38"],
+    whiteOrange: ["#ffffff", "#b55b00", "#7a3c00"]
+  };
+  const [fill, stroke, color] = tones[tone] || tones.white;
+  const lines = Array.isArray(content) ? content : [content];
+  const lineHeight = size + 4;
+  const startY = y + height / 2 - ((lines.length - 1) * lineHeight) / 2 + size * 0.35;
+  return `
+    <g class="science-overlay-label">
+      <rect x="${x}" y="${y}" width="${width}" height="${height}" rx="13" fill="${fill}" fill-opacity="0.94" stroke="${stroke}" />
+    ${lines
+      .map(
+        (line, index) =>
+          `<text x="${x + width / 2}" y="${startY + index * lineHeight}" text-anchor="middle" font-size="${size}" font-weight="900" fill="${color}">${line}</text>`
+      )
+      .join("")}
+    </g>`;
+}
+
+function scienceArrow(x1, y1, x2, y2, color) {
+  const angle = Math.atan2(y2 - y1, x2 - x1);
+  const head = 18;
+  const wing = 10;
+  const baseX = x2 - head * Math.cos(angle);
+  const baseY = y2 - head * Math.sin(angle);
+  const leftX = baseX + wing * Math.cos(angle + Math.PI / 2);
+  const leftY = baseY + wing * Math.sin(angle + Math.PI / 2);
+  const rightX = baseX + wing * Math.cos(angle - Math.PI / 2);
+  const rightY = baseY + wing * Math.sin(angle - Math.PI / 2);
+  return `
+    <line x1="${x1}" y1="${y1}" x2="${baseX.toFixed(1)}" y2="${baseY.toFixed(1)}" stroke="${color}" stroke-width="7" stroke-linecap="round" />
+    <path d="M${x2} ${y2}L${leftX.toFixed(1)} ${leftY.toFixed(1)}L${rightX.toFixed(1)} ${rightY.toFixed(1)}Z" fill="${color}" />`;
+}
+
 function renderScienceVisual(target, type) {
   target.innerHTML = "";
 
@@ -1372,7 +1614,7 @@ function renderScienceVisual(target, type) {
 
   const artwork = document.createElement("div");
   artwork.className = "science-diagram-artwork";
-  artwork.innerHTML = data.svg;
+  artwork.innerHTML = data.image ? renderScienceImageSvg(type, data) : data.svg;
 
   const labels = document.createElement("div");
   labels.className = "science-diagram-labels";

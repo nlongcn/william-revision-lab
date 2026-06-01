@@ -677,7 +677,8 @@ const scienceDiagramData = {
         <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
         <rect x="54" y="68" width="170" height="72" rx="14" fill="#146c80" />
         <text x="139" y="96" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">Change</text>
-        <text x="139" y="122" text-anchor="middle" font-size="15" fill="#d9f8f2">independent variable</text>
+        <text x="139" y="118" text-anchor="middle" font-size="13" fill="#d9f8f2">independent</text>
+        <text x="139" y="134" text-anchor="middle" font-size="13" fill="#d9f8f2">variable</text>
         <path d="M232 104H316" stroke="#17386f" stroke-width="8" stroke-linecap="round" />
         <path d="M316 104l-18-14v28z" fill="#17386f" />
         <rect x="332" y="52" width="120" height="108" rx="18" fill="#ffffff" stroke="#146c80" stroke-width="4" />
@@ -693,13 +694,15 @@ const scienceDiagramData = {
         <text x="620" y="135" text-anchor="middle" font-size="13" fill="#e7f7ef">variable</text>
         <rect x="58" y="220" width="198" height="68" rx="14" fill="#fff" stroke="#d7dde8" />
         <text x="157" y="248" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Control variables</text>
-        <text x="157" y="273" text-anchor="middle" font-size="14" fill="#3f4656">temperature, time, amount</text>
+        <text x="157" y="271" text-anchor="middle" font-size="13" fill="#3f4656">temperature, time</text>
+        <text x="157" y="287" text-anchor="middle" font-size="13" fill="#3f4656">and amount</text>
         <rect x="288" y="220" width="142" height="68" rx="14" fill="#fff" stroke="#d7dde8" />
         <text x="359" y="248" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Repeat</text>
         <text x="359" y="273" text-anchor="middle" font-size="14" fill="#3f4656">3 readings</text>
         <rect x="462" y="220" width="198" height="68" rx="14" fill="#fff" stroke="#d7dde8" />
         <text x="561" y="248" text-anchor="middle" font-size="17" font-weight="800" fill="#17386f">Mean</text>
-        <text x="561" y="273" text-anchor="middle" font-size="14" fill="#3f4656">ignore justified anomaly</text>
+        <text x="561" y="271" text-anchor="middle" font-size="13" fill="#3f4656">check anomaly</text>
+        <text x="561" y="287" text-anchor="middle" font-size="13" fill="#3f4656">before mean</text>
       </svg>`
   },
   graphs: {
@@ -754,11 +757,11 @@ const scienceDiagramData = {
         <text x="400" y="152" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Reliability</text>
         <text x="500" y="94" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">Improve</text>
         <path d="M202 234l56-42M302 176l56-42M402 118l56-42" stroke="#17386f" stroke-width="5" stroke-linecap="round" marker-end="url(#scienceArrowEval)" />
-        <defs><marker id="scienceArrowEval" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <defs><marker id="scienceArrowEval" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#17386f" /></marker></defs>
         <rect x="90" y="66" width="210" height="92" rx="14" fill="#fff" stroke="#d7dde8" />
-        <text x="195" y="98" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">CE sentence frame</text>
-        <text x="195" y="124" text-anchor="middle" font-size="14" fill="#3f4656">As X increased, Y...</text>
-        <text x="195" y="146" text-anchor="middle" font-size="14" fill="#3f4656">For example, 8 to 24...</text>
+        <text x="195" y="96" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">CE frame</text>
+        <text x="195" y="122" text-anchor="middle" font-size="14" fill="#3f4656">As X increased,</text>
+        <text x="195" y="144" text-anchor="middle" font-size="14" fill="#3f4656">Y changed...</text>
       </svg>`
   },
   photosynthesis: {
@@ -777,16 +780,24 @@ const scienceDiagramData = {
         </g>
         <path d="M340 92c98-72 198 6 168 104-26 86-164 96-220 30-52-62-16-110 52-134z" fill="#55a56f" stroke="#1f7a5c" stroke-width="5" />
         <path d="M346 242c42-42 82-88 132-136" stroke="#174a38" stroke-width="5" stroke-linecap="round" />
-        <path d="M292 164h-94" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
-        <path d="M244 262h72" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
-        <path d="M526 164h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
-        <path d="M526 218h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhoto)" />
-        <defs><marker id="scienceArrowPhoto" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="currentColor" /></marker></defs>
-        <text x="142" y="158" font-size="18" font-weight="900" fill="#146c80">CO2 in</text>
-        <text x="204" y="286" font-size="18" font-weight="900" fill="#146c80">H2O from roots</text>
-        <text x="556" y="154" font-size="18" font-weight="900" fill="#1f7a5c">O2 out</text>
-        <text x="548" y="210" font-size="18" font-weight="900" fill="#1f7a5c">glucose</text>
-        <text x="330" y="286" font-size="18" font-weight="900" fill="#17386f">stored as starch</text>
+        <path d="M292 164h-94" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoIn)" />
+        <path d="M244 262h72" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoIn)" />
+        <path d="M526 164h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoOut)" />
+        <path d="M526 218h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoOut)" />
+        <defs>
+          <marker id="scienceArrowPhotoIn" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#146c80" /></marker>
+          <marker id="scienceArrowPhotoOut" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#1f7a5c" /></marker>
+        </defs>
+        <rect x="118" y="128" width="74" height="44" rx="10" fill="#fff" stroke="#146c80" />
+        <text x="155" y="156" text-anchor="middle" font-size="16" font-weight="900" fill="#146c80">CO2</text>
+        <rect x="166" y="248" width="76" height="44" rx="10" fill="#fff" stroke="#146c80" />
+        <text x="204" y="276" text-anchor="middle" font-size="16" font-weight="900" fill="#146c80">H2O</text>
+        <rect x="622" y="142" width="68" height="44" rx="10" fill="#fff" stroke="#1f7a5c" />
+        <text x="656" y="170" text-anchor="middle" font-size="16" font-weight="900" fill="#1f7a5c">O2</text>
+        <rect x="622" y="198" width="78" height="44" rx="10" fill="#fff" stroke="#1f7a5c" />
+        <text x="661" y="226" text-anchor="middle" font-size="15" font-weight="900" fill="#1f7a5c">glucose</text>
+        <rect x="304" y="276" width="128" height="34" rx="10" fill="#fff" stroke="#17386f" />
+        <text x="368" y="299" text-anchor="middle" font-size="15" font-weight="900" fill="#17386f">starch store</text>
       </svg>`
   },
   starch: {
@@ -830,12 +841,13 @@ const scienceDiagramData = {
         <path d="M88 226h134" stroke="#146c80" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
         <path d="M514 134h116" stroke="#1f7a5c" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
         <path d="M514 224h116" stroke="#1f7a5c" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowResp)" />
-        <defs><marker id="scienceArrowResp" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <defs><marker id="scienceArrowResp" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#17386f" /></marker></defs>
         <text x="86" y="118" font-size="18" font-weight="900" fill="#146c80">glucose</text>
         <text x="86" y="214" font-size="18" font-weight="900" fill="#146c80">oxygen</text>
         <text x="548" y="122" font-size="18" font-weight="900" fill="#1f7a5c">energy</text>
         <text x="548" y="214" font-size="18" font-weight="900" fill="#1f7a5c">CO2 + water</text>
-        <text x="366" y="302" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">glucose + oxygen -> carbon dioxide + water</text>
+        <text x="366" y="294" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">glucose + oxygen</text>
+        <text x="366" y="316" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">-> CO2 + water + energy</text>
       </svg>`
   },
   nutrition: {
@@ -854,11 +866,11 @@ const scienceDiagramData = {
         <text x="242" y="174" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">balanced</text>
         <text x="242" y="196" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">diet</text>
         <g font-size="16" font-weight="900" fill="#17386f">
-          <text x="420" y="102">carbohydrates -> energy</text>
-          <text x="420" y="144">protein -> growth and repair</text>
-          <text x="420" y="186">fat -> store energy, insulate</text>
-          <text x="420" y="228">vitamins/minerals -> health</text>
-          <text x="420" y="270">fibre + water -> digestion</text>
+          <text x="420" y="102">carbs -> energy</text>
+          <text x="420" y="144">protein -> growth/repair</text>
+          <text x="420" y="186">fat -> energy store</text>
+          <text x="420" y="228">vitamins -> health</text>
+          <text x="420" y="270">fibre + water -> gut</text>
         </g>
         <g stroke="#d7dde8" stroke-width="3"><line x1="400" y1="112" x2="648" y2="112" /><line x1="400" y1="154" x2="648" y2="154" /><line x1="400" y1="196" x2="648" y2="196" /><line x1="400" y1="238" x2="648" y2="238" /></g>
       </svg>`
@@ -879,9 +891,10 @@ const scienceDiagramData = {
         <rect x="98" y="78" width="210" height="48" rx="12" fill="#146c80" />
         <text x="203" y="108" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">food and drink</text>
         <rect x="412" y="78" width="210" height="48" rx="12" fill="#1f7a5c" />
-        <text x="517" y="108" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">exercise and growth</text>
+        <text x="517" y="98" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">exercise</text>
+        <text x="517" y="120" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">and growth</text>
         <rect x="254" y="282" width="212" height="34" rx="10" fill="#fff" stroke="#d7dde8" />
-        <text x="360" y="305" text-anchor="middle" font-size="15" font-weight="900" fill="#17386f">balanced for that person</text>
+        <text x="360" y="305" text-anchor="middle" font-size="15" font-weight="900" fill="#17386f">balanced needs</text>
       </svg>`
   },
   particles: {
@@ -933,8 +946,9 @@ const scienceDiagramData = {
         <text x="360" y="118" text-anchor="middle" font-size="22" font-weight="900" fill="#1f7a5c">neutral</text>
         <text x="540" y="118" text-anchor="middle" font-size="22" font-weight="900" fill="#7250b5">alkali</text>
         <path d="M196 272h328" stroke="#17386f" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPh)" />
-        <defs><marker id="scienceArrowPh" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
-        <text x="360" y="304" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">acid + alkali -> salt + water</text>
+        <defs><marker id="scienceArrowPh" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#17386f" /></marker></defs>
+        <text x="360" y="296" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">acid + alkali</text>
+        <text x="360" y="318" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">-> salt + water</text>
       </svg>`
   },
   chromatography: {
@@ -957,8 +971,9 @@ const scienceDiagramData = {
         <text x="90" y="242" font-size="16" font-weight="900" fill="#17386f">pencil start line</text>
         <path d="M222 236h94" stroke="#17386f" stroke-width="4" stroke-linecap="round" marker-end="url(#scienceArrowChrom)" />
         <path d="M470 118h-72" stroke="#146c80" stroke-width="4" stroke-linecap="round" marker-end="url(#scienceArrowChrom)" />
-        <defs><marker id="scienceArrowChrom" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
-        <text x="360" y="320" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">different dyes travel different distances</text>
+        <defs><marker id="scienceArrowChrom" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#17386f" /></marker></defs>
+        <text x="360" y="306" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">dyes travel</text>
+        <text x="360" y="328" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">different distances</text>
       </svg>`
   },
   air: {
@@ -976,10 +991,12 @@ const scienceDiagramData = {
         <text x="558" y="188" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">O2 21%</text>
         <text x="625" y="238" text-anchor="middle" font-size="14" font-weight="900" fill="#b55b00">trace</text>
         <rect x="98" y="82" width="198" height="44" rx="12" fill="#e7f7ef" stroke="#1f7a5c" />
-        <text x="197" y="110" text-anchor="middle" font-size="16" font-weight="900" fill="#174a38">not chemically joined</text>
+        <text x="197" y="99" text-anchor="middle" font-size="14" font-weight="900" fill="#174a38">not chemically</text>
+        <text x="197" y="122" text-anchor="middle" font-size="14" font-weight="900" fill="#174a38">joined</text>
         <rect x="424" y="82" width="198" height="44" rx="12" fill="#eef4ff" stroke="#146c80" />
-        <text x="523" y="110" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">separable physically</text>
-        <text x="360" y="290" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">mixture, not compound</text>
+        <text x="523" y="99" text-anchor="middle" font-size="14" font-weight="900" fill="#17386f">separable</text>
+        <text x="523" y="122" text-anchor="middle" font-size="14" font-weight="900" fill="#17386f">physically</text>
+        <text x="360" y="290" text-anchor="middle" font-size="18" font-weight="900" fill="#17386f">mixture</text>
       </svg>`
   },
   energy: {
@@ -998,7 +1015,8 @@ const scienceDiagramData = {
         <path d="M586 176l-24-18v36z" fill="#1f7a5c" />
         <path d="M414 198c40 48 84 70 136 72" fill="none" stroke="#c43d4b" stroke-width="20" stroke-linecap="round" />
         <text x="514" y="152" text-anchor="middle" font-size="18" font-weight="900" fill="#1f7a5c">useful light</text>
-        <text x="534" y="306" text-anchor="middle" font-size="18" font-weight="900" fill="#c43d4b">wasted heat/sound</text>
+        <text x="534" y="296" text-anchor="middle" font-size="16" font-weight="900" fill="#c43d4b">wasted</text>
+        <text x="534" y="316" text-anchor="middle" font-size="16" font-weight="900" fill="#c43d4b">heat/sound</text>
         <text x="326" y="122" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">transfer pathway</text>
       </svg>`
   },
@@ -1013,7 +1031,7 @@ const scienceDiagramData = {
         <text x="143" y="172" text-anchor="middle" font-size="26" font-weight="900" fill="#fff">100 J</text>
         <text x="143" y="202" text-anchor="middle" font-size="17" fill="#d9f8f2">input</text>
         <path d="M238 180h106" stroke="#17386f" stroke-width="12" stroke-linecap="round" marker-end="url(#scienceArrowCons)" />
-        <defs><marker id="scienceArrowCons" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <defs><marker id="scienceArrowCons" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#17386f" /></marker></defs>
         <rect x="378" y="92" width="122" height="86" rx="16" fill="#1f7a5c" />
         <text x="439" y="130" text-anchor="middle" font-size="24" font-weight="900" fill="#fff">70 J</text>
         <text x="439" y="156" text-anchor="middle" font-size="15" fill="#e7f7ef">useful</text>
@@ -1043,7 +1061,8 @@ const scienceDiagramData = {
         <path d="M456 164h120l-20 70H476z" fill="#3f4656" />
         <path d="M484 136c-20-24 20-34 0-58M536 136c-20-24 20-34 0-58" fill="none" stroke="#667085" stroke-width="9" stroke-linecap="round" />
         <text x="520" y="264" text-anchor="middle" font-size="16" font-weight="900" fill="#7a3c00">coal, oil, gas</text>
-        <text x="360" y="318" text-anchor="middle" font-size="17" font-weight="900" fill="#17386f">Use advantages and disadvantages for comparison questions</text>
+        <text x="360" y="310" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">compare advantages</text>
+        <text x="360" y="330" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">and disadvantages</text>
       </svg>`
   },
   pollution: {
@@ -1059,7 +1078,7 @@ const scienceDiagramData = {
         <path d="M118 118c-22-26 18-38 0-64M176 98c-22-26 18-38 0-64" fill="none" stroke="#667085" stroke-width="9" stroke-linecap="round" />
         <text x="149" y="292" text-anchor="middle" font-size="15" font-weight="900" fill="#17386f">burning fuel</text>
         <path d="M238 170h96" stroke="#17386f" stroke-width="7" stroke-linecap="round" marker-end="url(#scienceArrowPoll)" />
-        <defs><marker id="scienceArrowPoll" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#17386f" /></marker></defs>
+        <defs><marker id="scienceArrowPoll" markerWidth="14" markerHeight="14" refX="9" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L14 7L0 14z" fill="#17386f" /></marker></defs>
         <rect x="354" y="62" width="120" height="58" rx="14" fill="#c43d4b" />
         <text x="414" y="98" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">CO2</text>
         <path d="M374 132c58 38 106 38 164 0" fill="none" stroke="#c43d4b" stroke-width="8" stroke-linecap="round" />

@@ -1125,9 +1125,14 @@ button {
 }
 
 .science-visual-block {
+  grid-template-columns: 1fr;
   background:
     linear-gradient(135deg, rgba(20, 108, 128, 0.08), transparent 48%),
     #f7fbff;
+}
+
+.science-visual-block .visual-copy {
+  max-width: 760px;
 }
 
 .science-visual-stage {

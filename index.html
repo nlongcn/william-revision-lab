@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Year 7 Revision Lab</title>
+    <meta
+      name="description"
+      content="A Year 7 UK revision website with focused Maths, French, Religious Education and Science lessons."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-subject="religion">
+    <canvas class="number-field" id="numberField" aria-hidden="true"></canvas>
+
+    <nav class="subject-switcher" aria-label="Revision subject">
+      <button
+        class="subject-tab"
+        type="button"
+        data-subject-target="mathPanel"
+        role="tab"
+        aria-controls="mathPanel"
+        aria-selected="false"
+      >
+        Maths
+      </button>
+      <button
+        class="subject-tab"
+        type="button"
+        data-subject-target="frenchPanel"
+        role="tab"
+        aria-controls="frenchPanel"
+        aria-selected="false"
+      >
+        French test
+      </button>
+      <button
+        class="subject-tab"
+        type="button"
+        data-subject-target="sciencePanel"
+        role="tab"
+        aria-controls="sciencePanel"
+        aria-selected="false"
+      >
+        Science
+      </button>
+      <button
+        class="subject-tab active"
+        type="button"
+        data-subject-target="religionPanel"
+        role="tab"
+        aria-controls="religionPanel"
+        aria-selected="true"
+      >
+        RE lesson
+      </button>
+    </nav>
+
+    <section class="subject-panel" id="mathPanel" aria-labelledby="mathTitle" hidden>
+      <header class="site-header">
+        <div class="header-copy">
+          <p class="eyebrow">Year 7 maths revision</p>
+          <h1 id="mathTitle">Maths Test Lab</h1>
+          <p>
+            Pick a mission, learn the idea, dodge the classic traps, then test
+            yourself. Built for quick revision without babyish fluff.
+          </p>
+        </div>
+        <div class="score-panel" aria-label="Revision progress">
+          <div>
+            <span class="score-value" id="topicsCount">15</span>
+            <span class="score-label">Topics</span>
+          </div>
+          <div>
+            <span class="score-value" id="practiceCount">0</span>
+            <span class="score-label">Practice sets opened</span>
+          </div>
+          <button class="primary-button" id="randomTopicButton" type="button">
+            Random mission
+          </button>
+        </div>
+      </header>
+
+      <main class="app-shell">
+        <aside class="topic-rail" aria-label="Topic navigation">
+          <div class="rail-heading">
+            <span>Mission list</span>
+            <button class="ghost-button" id="expandAllButton" type="button">
+              Expand all
+            </button>
+          </div>
+          <nav id="topicNav"></nav>
+        </aside>
+
+        <section class="content-stage" aria-live="polite">
+          <div class="toolbar">
+            <label class="search-box">
+              <span>Search topics</span>
+              <input id="topicSearch" type="search" placeholder="Try fractions, algebra, HCF..." />
+            </label>
+            <div class="view-toggle" role="group" aria-label="View mode">
+              <button class="toggle-button active" type="button" data-view="single">
+                Focus
+              </button>
+              <button class="toggle-button" type="button" data-view="all">
+                All topics
+              </button>
+            </div>
+          </div>
+
+          <div id="topicContainer" class="topic-container"></div>
+        </section>
+      </main>
+
+      <template id="topicTemplate">
+        <article class="topic-card">
+          <div class="topic-card-header">
+            <div>
+              <p class="topic-kicker"></p>
+              <h2></h2>
+            </div>
+            <button class="mini-button" type="button" data-action="jump-practice">
+              Practice
+            </button>
+          </div>
+
+          <div class="info-grid">
+            <section class="info-block explain">
+              <h3>How it works</h3>
+              <p></p>
+            </section>
+            <section class="info-block catches">
+              <h3>What catches people out</h3>
+              <ul></ul>
+            </section>
+            <section class="info-block hacks">
+              <h3>Useful shortcuts</h3>
+              <ul></ul>
+            </section>
+          </div>
+
+          <section class="visual-block">
+            <div class="visual-copy">
+              <p class="visual-label">Visual model</p>
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="visual-stage"></div>
+          </section>
+
+          <section class="example-block">
+            <h3>Example</h3>
+            <div class="worked-example"></div>
+          </section>
+
+          <section class="practice-block">
+            <div class="practice-heading">
+              <div>
+                <h3>Try three</h3>
+                <p>Answer first, then reveal. No penalty for needing another set.</p>
+              </div>
+              <button class="primary-button" type="button" data-action="more-practice">
+                More questions
+              </button>
+            </div>
+            <ol class="questions-list"></ol>
+          </section>
+        </article>
+      </template>
+    </section>
+
+    <section class="subject-panel" id="frenchPanel" aria-labelledby="frenchTitle" hidden>
+      <header class="site-header french-header">
+        <div class="header-copy">
+          <p class="eyebrow">Year 7 French revision</p>
+          <h1 id="frenchTitle">French Fit Lab</h1>
+          <p>
+            Food, drink, sports, healthy lifestyle phrases, negatives, and
+            future tense practice for the test. Short missions, lots of
+            reveal-answer questions, and useful facts along the way.
+          </p>
+        </div>
+        <div class="french-side-panel">
+          <img
+            class="french-hero-image"
+            src="assets/french-revision-hero.png"
+            alt="French revision desk with food cards and sports equipment"
+          />
+          <div class="score-panel" aria-label="French revision progress">
+            <div>
+              <span class="score-value" id="frenchTopicsCount">9</span>
+              <span class="score-label">French missions</span>
+            </div>
+            <div>
+              <span class="score-value" id="frenchAnsweredCount">0</span>
+              <span class="score-label">Answers revealed</span>
+            </div>
+            <button class="primary-button" id="frenchRandomButton" type="button">
+              Random French mission
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-shell french-shell">
+        <aside class="topic-rail" aria-label="French topic navigation">
+          <div class="rail-heading">
+            <span>French missions</span>
+            <button class="ghost-button" id="frenchExpandAllButton" type="button">
+              Expand all
+            </button>
+          </div>
+          <nav id="frenchNav"></nav>
+        </aside>
+
+        <section class="content-stage" aria-live="polite">
+          <div class="toolbar">
+            <label class="search-box">
+              <span>Search French</span>
+              <input id="frenchSearch" type="search" placeholder="Try manger, football, jamais..." />
+            </label>
+            <div class="view-toggle" role="group" aria-label="French view mode">
+              <button class="french-toggle-button active" type="button" data-french-view="single">
+                Focus
+              </button>
+              <button class="french-toggle-button" type="button" data-french-view="all">
+                All French
+              </button>
+            </div>
+          </div>
+
+          <div class="topic-container" id="frenchContainer"></div>
+        </section>
+      </main>
+    </section>
+
+    <section class="subject-panel" id="sciencePanel" aria-labelledby="scienceTitle" hidden>
+      <header class="site-header science-header">
+        <div class="header-copy">
+          <p class="eyebrow">Year 7 science common entrance</p>
+          <h1 id="scienceTitle">Science Exam Lab</h1>
+          <p>
+            Biology, Chemistry, Physics and Working Scientifically revision
+            structured around Common Entrance style questions. Use each card to
+            revise the content, answer the question, then reveal the mark
+            scheme.
+          </p>
+        </div>
+        <div class="french-side-panel science-side-panel">
+          <img
+            class="french-hero-image science-hero-image"
+            src="assets/science-revision-hero.png"
+            alt="Science revision desk with graph paper, plant practical equipment, pH tubes and physics models"
+          />
+          <div class="score-panel" aria-label="Science revision progress">
+            <div>
+              <span class="score-value" id="scienceTopicsCount">16</span>
+              <span class="score-label">Science topics</span>
+            </div>
+            <div>
+              <span class="score-value" id="scienceAnsweredCount">0</span>
+              <span class="score-label">Mark schemes revealed</span>
+            </div>
+            <button class="primary-button" id="scienceRandomButton" type="button">
+              Random Science topic
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-shell science-shell">
+        <aside class="topic-rail" aria-label="Science topic navigation">
+          <div class="rail-heading">
+            <span>Science topics</span>
+            <button class="ghost-button" id="scienceExpandAllButton" type="button">
+              Expand all
+            </button>
+          </div>
+          <nav id="scienceNav"></nav>
+        </aside>
+
+        <section class="content-stage" aria-live="polite">
+          <div class="toolbar">
+            <label class="search-box">
+              <span>Search Science</span>
+              <input id="scienceSearch" type="search" placeholder="Try photosynthesis, pH, energy..." />
+            </label>
+            <div class="view-toggle" role="group" aria-label="Science view mode">
+              <button class="science-toggle-button active" type="button" data-science-view="single">
+                Focus
+              </button>
+              <button class="science-toggle-button" type="button" data-science-view="all">
+                All Science
+              </button>
+            </div>
+          </div>
+
+          <div class="topic-container" id="scienceContainer"></div>
+        </section>
+      </main>
+    </section>
+
+    <section class="subject-panel active" id="religionPanel" aria-labelledby="religionTitle">
+      <header class="site-header religion-header">
+        <div class="header-copy">
+          <p class="eyebrow">Year 7 religious education</p>
+          <h1 id="religionTitle">Compassion & Service</h1>
+          <p>
+            Follow a story about a community under pressure, then explore how
+            different religions turn compassion into service, equality and care.
+            The focus is Judaism's Tzedakah: giving as justice, not just spare
+            change.
+          </p>
+        </div>
+        <div class="french-side-panel religion-side-panel">
+          <img
+            class="french-hero-image religion-hero-image"
+            src="assets/compassion-service-hero.png"
+            alt="Pupils and volunteers sharing food parcels and care in a community setting"
+          />
+          <div class="score-panel" aria-label="Religious education lesson progress">
+            <div>
+              <span class="score-value" id="religionTopicsCount">5</span>
+              <span class="score-label">Lesson chapters</span>
+            </div>
+            <div>
+              <span class="score-value" id="religionAnsweredCount">0</span>
+              <span class="score-label">Reflections revealed</span>
+            </div>
+            <button class="primary-button" id="religionRandomButton" type="button">
+              Random chapter
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-shell religion-shell">
+        <aside class="topic-rail" aria-label="Religious education lesson navigation">
+          <div class="rail-heading">
+            <span>Lesson chapters</span>
+            <button class="ghost-button" id="religionExpandAllButton" type="button">
+              Expand all
+            </button>
+          </div>
+          <nav id="religionNav"></nav>
+        </aside>
+
+        <section class="content-stage" aria-live="polite">
+          <div class="toolbar">
+            <label class="search-box">
+              <span>Search lesson</span>
+              <input id="religionSearch" type="search" placeholder="Try Tzedakah, equality, dignity..." />
+            </label>
+            <div class="view-toggle" role="group" aria-label="Religious education view mode">
+              <button class="religion-toggle-button active" type="button" data-religion-view="single">
+                Focus
+              </button>
+              <button class="religion-toggle-button" type="button" data-religion-view="all">
+                All chapters
+              </button>
+            </div>
+          </div>
+
+          <div class="topic-container" id="religionContainer"></div>
+        </section>
+      </main>
+    </section>
+
+    <script src="app.js"></script>
+    <script src="french.js"></script>
+    <script src="religion.js"></script>
+    <script src="science.js"></script>
+  </body>
+</html>

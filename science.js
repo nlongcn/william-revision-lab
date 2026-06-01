@@ -1047,22 +1047,20 @@ const scienceDiagramData = {
     caption: "Comparison answers need both sides: renewable status, pollution and reliability.",
     points: ["Renewable replaces quickly", "Non-renewable runs out", "Fossil fuels release CO2", "Weather affects some renewables"],
     svg: `
-      <svg class="science-diagram-svg" viewBox="0 0 720 360" role="img" aria-label="Renewable and non-renewable energy resources comparison">
-        <rect x="24" y="28" width="672" height="304" rx="22" fill="#f7fbff" stroke="#d7dde8" />
-        <rect x="70" y="72" width="260" height="218" rx="18" fill="#e7f7ef" stroke="#1f7a5c" stroke-width="4" />
-        <rect x="390" y="72" width="260" height="218" rx="18" fill="#fff7e8" stroke="#b55b00" stroke-width="4" />
-        <text x="200" y="110" text-anchor="middle" font-size="22" font-weight="900" fill="#174a38">renewable</text>
-        <text x="520" y="110" text-anchor="middle" font-size="22" font-weight="900" fill="#7a3c00">non-renewable</text>
-        <path d="M154 160c28-34 84-28 104 10" fill="none" stroke="#1f7a5c" stroke-width="8" stroke-linecap="round" />
-        <path d="M262 166l-26-4 14-22z" fill="#1f7a5c" />
-        <circle cx="176" cy="204" r="22" fill="#ffd166" stroke="#b55b00" stroke-width="4" />
-        <path d="M222 194l42-30M230 216l42 30" stroke="#146c80" stroke-width="7" stroke-linecap="round" />
-        <text x="200" y="264" text-anchor="middle" font-size="16" font-weight="900" fill="#174a38">wind, solar, hydro</text>
-        <path d="M456 164h120l-20 70H476z" fill="#3f4656" />
-        <path d="M484 136c-20-24 20-34 0-58M536 136c-20-24 20-34 0-58" fill="none" stroke="#667085" stroke-width="9" stroke-linecap="round" />
-        <text x="520" y="264" text-anchor="middle" font-size="16" font-weight="900" fill="#7a3c00">coal, oil, gas</text>
-        <text x="360" y="310" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">compare advantages</text>
-        <text x="360" y="330" text-anchor="middle" font-size="16" font-weight="900" fill="#17386f">and disadvantages</text>
+      <svg class="science-diagram-svg" viewBox="0 0 720 406" role="img" aria-label="Renewable and non-renewable energy resources comparison">
+        <defs>
+          <clipPath id="scienceEnergyResourcesClip"><rect x="24" y="28" width="672" height="378" rx="22" /></clipPath>
+        </defs>
+        <rect x="24" y="28" width="672" height="378" rx="22" fill="#f7fbff" stroke="#d7dde8" />
+        <image href="assets/science/energy-resources-illustration.jpg" x="24" y="28" width="672" height="378" preserveAspectRatio="xMidYMid slice" clip-path="url(#scienceEnergyResourcesClip)" />
+        <rect x="58" y="50" width="250" height="50" rx="14" fill="#e7f7ef" fill-opacity="0.94" stroke="#1f7a5c" />
+        <text x="183" y="83" text-anchor="middle" font-size="24" font-weight="900" fill="#174a38">renewable</text>
+        <rect x="412" y="50" width="250" height="50" rx="14" fill="#fff7e8" fill-opacity="0.94" stroke="#b55b00" />
+        <text x="537" y="83" text-anchor="middle" font-size="23" font-weight="900" fill="#7a3c00">non-renewable</text>
+        <rect x="68" y="324" width="254" height="48" rx="14" fill="#ffffff" fill-opacity="0.94" stroke="#1f7a5c" />
+        <text x="195" y="355" text-anchor="middle" font-size="18" font-weight="900" fill="#174a38">wind, solar, hydro</text>
+        <rect x="398" y="324" width="254" height="48" rx="14" fill="#ffffff" fill-opacity="0.94" stroke="#b55b00" />
+        <text x="525" y="355" text-anchor="middle" font-size="18" font-weight="900" fill="#7a3c00">coal, oil, gas</text>
       </svg>`
   },
   pollution: {

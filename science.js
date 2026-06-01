@@ -780,7 +780,7 @@ const scienceDiagramData = {
         </g>
         <path d="M340 92c98-72 198 6 168 104-26 86-164 96-220 30-52-62-16-110 52-134z" fill="#55a56f" stroke="#1f7a5c" stroke-width="5" />
         <path d="M346 242c42-42 82-88 132-136" stroke="#174a38" stroke-width="5" stroke-linecap="round" />
-        <path d="M292 164h-94" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoIn)" />
+        <path d="M198 164h94" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoIn)" />
         <path d="M244 262h72" stroke="#146c80" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoIn)" />
         <path d="M526 164h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoOut)" />
         <path d="M526 218h94" stroke="#1f7a5c" stroke-width="6" stroke-linecap="round" marker-end="url(#scienceArrowPhotoOut)" />
